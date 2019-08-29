@@ -82,7 +82,7 @@ class RNGTable {
   String toString() {
     String s = "";
     for(Roll r : rolls) {
-      s += ("\n"+ r.getValue() + ", " + r.getLands());
+      s += ("\n"+ r.getValue() + ", " + r.getProbability());
     }
     return s;
   }

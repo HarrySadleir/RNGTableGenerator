@@ -17,8 +17,9 @@ class Roll {
     probability=(float) lands/iterations;
   }
   
-  float getProbability() {
-    return probability;
+  String getProbability() {
+    calcProbability();
+    return (probability*100) + "%";
   }
   
   int getLands() {

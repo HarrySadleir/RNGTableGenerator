@@ -8,7 +8,7 @@ void setup() {
   ArrayList<Integer> die = new ArrayList<Integer>();
   die.add(4);
   die.add(4);
-  die.add(6);
+  die.add(8);
 
   RNGTable t = new RNGTable(die);
   
