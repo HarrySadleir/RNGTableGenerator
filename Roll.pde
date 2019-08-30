@@ -9,6 +9,7 @@ class Roll {
     probability = 0;
   }
   
+  //add and instance where this number was landed on, refered to as a land
   void addLand() {
     lands++;
   }
@@ -17,15 +18,24 @@ class Roll {
     probability=(float) lands/iterations;
   }
   
-  String getProbability() {
+  //return percentage form of probability
+  String toString() {
     calcProbability();
     return (probability*100) + "%";
   }
   
+  //return decimal form of probability
+  float getProbability() {
+    calcProbability();
+    return probability;
+  }
+  
+  //return number of times this number was landed on, refered to as lands
   int getLands() {
     return lands;
   }
   
+  //return number being rolled
   int getValue() {
     return value;
   }

@@ -1,33 +1,30 @@
 final int diceSelect = 0;
 final int table = 1;
 int mode = 0;
+RNGTable t;
 
 void setup() {
   size(600, 600);
   
   ArrayList<Integer> die = new ArrayList<Integer>();
-  die.add(4);
-  die.add(4);
-  die.add(8);
+  die.add(10);
+  die.add(10);
+  
+  
 
-  RNGTable t = new RNGTable(die);
+  t = new RNGTable(die);
   
   
   println(t);
 }
 
 void draw() {
-  background(0);
-  if(mode == diceSelect) diceSelection();
-  else if(mode == table) showTable();
-  else println("Mode out of bounds");
-}
-
-void diceSelection(){
-  //int 
+  background(100);
+  //if(mode == diceSelect) diceSelection();
+  //else if(mode == table) showTable();
+  //else println("Mode out of bounds");
   
-}
-
-void showTable() {
+  
+  t.display();
   
 }
