@@ -102,12 +102,22 @@ abstract class RNGTable {
 
 
     //display grid
+    displayGrid(x, wid, scale, maxProb);
+  }
+  
+  void displayGrid(float x, float wid, float scale, float maxProb) {
     stroke(255);
     for (int i = 1; i < 10; i++) {
       float scaleH = scale/maxProb*height;
       strokeWeight(1);
       line(x, height-i*scaleH, x+wid, height-i*scaleH);
-      text((ceil((i)*scale*100)) + "%", x + width/50, height-i*scaleH);
+      
+      //
+      float value = (i)*scale*100;
+      if(value%1>.5) value += 1;
+      
+      text((int) value + "%", x + width/50, height-i*scaleH);
     }
+    
   }
 }

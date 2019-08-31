@@ -10,13 +10,13 @@ void setup() {
   size(800, 800);
   
   ArrayList<Integer> die = new ArrayList<Integer>();
+  die.add(6);
   die.add(8);
   die.add(12);
-  die.add(4);
   
 
   t1 = new RNGTableBF(die);
-  t2 = new RNGTableRoll(die, 1000);
+  t2 = new RNGTableRoll(die, 100000);
   
   
   
