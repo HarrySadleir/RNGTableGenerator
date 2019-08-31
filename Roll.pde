@@ -14,6 +14,10 @@ class Roll {
     lands++;
   }
   
+  void addIteration() {
+    iterations++;
+  }
+  
   void calcProbability() {
     probability=(float) lands/iterations;
   }
